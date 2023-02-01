@@ -49,6 +49,7 @@ contract Token {
         // transaction will revert.
 
         // require(_______, "Not enough tokens"); TODO TODO TODO TODO
+        require(balances[msg.sender] >= amount, "Not enough tokens");
 
         // We can print messages and values using console.log, a feature of
         // Hardhat Network:
@@ -63,11 +64,15 @@ contract Token {
 
         // balances[_______] -= _______; TODO TODO TODO TODO
         // balances[_______] += _______; TODO TODO TODO TODO
+        balances[msg.sender] -= amount;
+        balances[to] += amount;
 
-        
+
+
         // Notify off-chain applications of the transfer.
 
         // emit ___________; TODO TODO TODO TODO
+        emit Transfer(msg.sender, to, amount);
     }
 
     /**
@@ -78,6 +83,6 @@ contract Token {
      */
     function balanceOf(address account) external view returns (uint256) {
         // return _________; TODO TODO TODO TODO
-        return 0;
+        return balances[account];
     }
 }
