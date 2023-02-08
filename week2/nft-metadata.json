@@ -2,10 +2,10 @@
   "attributes": [
     {
       "trait_type": "Color",
-      "value": "Purple"
+      "value": "Blue"
     }
   ],
-  "description": "The logo of the superior college blockchain club.",
-  "image": "ipfs://Qmb95gBvgATP2DkXUga8dA7TFcfj9kHTCJGDmbXLTSkP5S",
-  "name": "FranklinDAO"
+  "description": "Group photo in Seattle.",
+  "image": "ipfs://QmWZLGa1GNt1Bz3BPv4mvxspqDdDg5ErhrT4bjfj8KwpkJ",
+  "name": "SeattleSquad"
 }
