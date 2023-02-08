@@ -20,22 +20,22 @@ async function main() {
     const tx = await PennFT.functions.mintNFT(wallet.getAddress(), TOKEN_URI);
     console.log(`Minted NFT with tx hash: ${tx.hash}`);
 
-    // todo: mint another NFT to a different wallet
+    // Mint another NFT to a different wallet
     const wallet2 = await hre.ethers.provider.getSigner(wallets[1]);
     const tx2 = await PennFT.functions.mintNFT(wallet2.getAddress(), TOKEN_URI);
-    console.log(`Minted NFT with tx hash: ${tx2.hash}`);
+    console.log(`Minted another NFT with tx hash: ${tx2.hash}`);
 
-    // todo: get the number of NFTs minted
-    const numNFTs = await PennFT.functions.tokenCount();
-    console.log(`Number of NFTs minted: ${numNFTs}`);
+    // Get the number of NFTs minted
+    const numTokens = await PennFT.functions.tokenCount();
+    console.log(`${numTokens} tokens minted`);
 
-    // todo: get the URI of the first NFT
+    // Get the URI of the first NFT
     const uri = await PennFT.functions.tokenURI(1);
-    console.log(`URI of the first NFT: ${uri}`);
+    console.log(`Token 1 URI: ${uri}`);
 
-    // todo: get the URI of the second NFT
+    // Get the URI of the second NFT
     const uri2 = await PennFT.functions.tokenURI(2);
-    console.log(`URI of the second NFT: ${uri2}`);
+    console.log(`Token 1 URI: ${uri2}`);
 }
 
 main()
